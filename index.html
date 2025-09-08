@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rakshana Portfolio</title>
+  <style>
+    /* General Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      line-height: 1.6;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      margin-bottom: 10px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      color: #ff9800;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    /* About */
+    #about img {
+      width: 150px;
+      border-radius: 50%;
+      display: block;
+      margin: 20px auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    #about h3, #about p {
+      text-align: center;
+    }
+    #about h3 {
+      margin: 10px 0;
+    }
+    #about p {
+      font-size: 18px;
+    }
+    /* Skills */
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .skills-list div {
+      background: #fff;
+      margin: 10px;
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    /* Projects */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .project {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .project:hover {
+      transform: scale(1.05);
+    }
+    /* Contact */
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: auto;
+    }
+    form input, form textarea {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      padding: 10px;
+      border: none;
+      background: #333;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #ff9800;
+    }
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rakshana Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="https://i.postimg.cc/QdYsyTbZ/IMG-20250514-122209.jpg" alt="Rakshana Photo">
+    <h3>Hi, I'm Rakshana</h3>
+    <p>Hello! I'm Rakshana, a passionate web developer who loves building beautiful and functional websites.</p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>My Skills</h2>
+    <div class="skills-list">
+      <div>HTML</div>
+      <div>CSS</div>
+      <div>JavaScript</div>
+      <div>React</div>
+      <div>Python</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Project 1</h3>
+        <p>A simple project description goes here.</p>
+      </div>
+      <div class="project">
+        <h3>Project 2</h3>
+        <p>A simple project description goes here.</p>
+      </div>
+      <div class="project">
+        <h3>Project 3</h3>
+        <p>A simple project description goes here.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Rakshana Portfolio. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Simple JavaScript to handle form submission
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Thank you, Rakshana! Your message has been sent.");
+      this.reset();
+    });
+  </script>
+</body>
+</html>
